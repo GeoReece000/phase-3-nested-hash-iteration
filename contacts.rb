@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 # this method returns a hash, which you can pass to the remove_strawberry method:
 # remove_strawberry(contacts)
@@ -19,6 +19,11 @@ end
 
 def remove_strawberry(contacts)
   # your code here!
+    contacts.each do |name, details|
+      if name == "Freddie Mercury" && details[:favorite_ice_cream_flavors].is_a?(Array)
+        details[:favorite_ice_cream_flavors].delete("strawberry")
+      end
+    end
 end
 
 # print the output to the terminal for inspection
